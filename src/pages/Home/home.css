@@ -14,13 +14,6 @@
   margin: 14px auto;
 }
 
-.loading{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 14px;
-}
-
 .movie-list .movie {
   width: 300px;
   padding: 15px 0;
@@ -45,7 +38,7 @@
   border-top-right-radius: 8px;
 }
 
-.movie-list a{
+.movie-list .detail-movie{
   display: flex;
   align-items: center;
   justify-content: center;

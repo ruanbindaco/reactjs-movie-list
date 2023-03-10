@@ -9,6 +9,17 @@ body{
   background-color: rgb(233, 233, 233);
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 14px;
+}
+
 .app{
   display: flex;
   width: 100%;

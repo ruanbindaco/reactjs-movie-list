@@ -40,8 +40,10 @@ function Home(){
           return(
             <div key={movie.id} className="movie">
               <h2 className="title">{movie.title}</h2>
-              <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
-              <Link to={`/filme/${movie.id}`}>Acessar</Link>
+              <Link to={`/filme/${movie.id}`}>
+                <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
+              </Link>
+              <Link to={`/filme/${movie.id}`}><div className="detail-movie">Acessar</div></Link>
             </div>
           )
         })}

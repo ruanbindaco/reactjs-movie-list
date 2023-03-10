@@ -32,7 +32,7 @@ function Filme(){
   }, [navigate, id])
 
   function saveMovie(){
-    const myList = localStorage.getItem("@primeflix");
+    const myList = localStorage.getItem("@12movies");
     let savedMovies = JSON.parse(myList) || [];
     const hasFilme = savedMovies.some( (savedMovie) => savedMovie.id === movie.id)
 
@@ -42,14 +42,14 @@ function Filme(){
     }
 
     savedMovies.push(movie);
-    localStorage.setItem("@primeflix", JSON.stringify(savedMovies));
+    localStorage.setItem("@12movies", JSON.stringify(savedMovies));
     toast.success("Filme salvo com sucesso!")
   }
 
   return(
     <>
     { isLoading ? (
-      <div className="movie-info">
+      <div className="loading">
         <h1>Carregando detalhes...</h1>
       </div>
     )

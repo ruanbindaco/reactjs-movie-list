@@ -1,39 +1,64 @@
+a {
+  text-decoration: none;
+  color: #000;
+}
 
-.meus-filmes{
+.my-movies{
   margin-top: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 
-.meus-filmes h1{
-  margin-bottom: 14px;
+.my-movies .title{
+  padding-bottom: 14px;
 }
 
-.meus-filmes span{
-  font-size: 18px;
+.my-movies .message{
+  font-size: 20px;
 }
 
-.meus-filmes ul{
-  width: 720px;
+.my-movies .movie-title{
+  font-size: 28px;
+  font-weight: 400;
 }
 
-.meus-filmes ul li{
+.my-movies ul{
+  width: 1070px;
+}
+
+.my-movies .movie{
   list-style: none;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px #ccc;
+  border-radius: 10px;
 }
 
-.meus-filmes div{
+.my-movies .movie img {
+  max-width: 30%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.my-movies .movie .infos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.my-movies .movie .options {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 25px;
+}
+
+
+.favorites div{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.meus-filmes div a {
-  text-decoration: none;
-  color: #116feb;
-  margin-right: 14px;
 }
