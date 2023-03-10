@@ -1,8 +1,19 @@
 import './header.css';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useWindowSize } from '../../hooks/useWindowSize';
 
 function Header(){
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const windowType = useWindowSize();
   return(
+    <>
+    { windowType !== 'mobile'  ?
     <div className="navbar">
       <header>
         <Link to="/">
@@ -26,8 +37,19 @@ function Header(){
           </svg>
           </a>
         </div>
-      </header>
-    </div>
+        </header> 
+      </div>
+      : 
+      <div className={`sidebar ${isOpen ? 'open' : ''}`}>
+        <div className="toggle-btn" onClick={toggleSidebar}>
+          <span className="bar">Menu</span>
+        </div>
+        <div className="sidebar-content">
+          {/* Sidebar content*/}
+        </div>
+      </div>
+      }
+    </>
   )
 }
 

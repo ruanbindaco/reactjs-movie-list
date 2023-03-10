@@ -54,6 +54,7 @@ function Filme(){
       </div>
     )
     : (
+      <div className="container">
       <div className="movie-info">
         <h1 className="title">{movie.title}</h1>
         <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} />
@@ -68,6 +69,7 @@ function Filme(){
             </a>
           </button>
         </div>
+      </div>
       </div>)}
     </>
   )

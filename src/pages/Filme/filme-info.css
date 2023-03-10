@@ -1,10 +1,13 @@
 
-
+.container {
+  display: flex;
+  justify-content: center;
+}
 .movie-info{
   display: flex;
   flex-direction: column;
-  margin: 0 auto 55px;
   max-width: 1070px;
+  padding: 0 60px 60px;
 }
 
 .movie-info .title{
@@ -51,4 +54,16 @@
 
 .area-buttons a:hover{
   color: #000;
+}
+
+@media (max-width: 834px) and (min-width: 480px) {
+  .movie-info{
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-info{
+    padding: 0 25px;
+  }
 }

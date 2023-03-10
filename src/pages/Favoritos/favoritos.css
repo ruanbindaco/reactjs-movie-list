@@ -4,7 +4,6 @@ a {
 }
 
 .my-movies{
-  margin-top: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +24,9 @@ a {
 }
 
 .my-movies ul{
-  width: 1070px;
+  width: 1215px;
+  max-width: 100%;
+  padding: 0 60px;
 }
 
 .my-movies .movie{
@@ -61,4 +62,55 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 834px) and (min-width: 480px) {
+  .my-movies ul{
+    padding: 0 30px;
+  }
+  .my-movies .movie-title{
+    font-size: 20px;
+  }
+  .my-movies .movie img {
+    max-width: 40%;
+  }
+  .options svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-movies,
+  .my-movies .movie,
+  .infos {
+    display: flex;
+    flex-direction: column;
+  }
+  .my-movies ul{
+    padding: 0 25px;
+  }
+  .my-movies .movie-title{
+    font-size: 26px;
+    width: 100%;
+    padding-left: 20px;
+    display: flex;
+    text-align: left;
+  }
+  .my-movies .movie img {
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+
+  .options {
+    justify-content: flex-end;
+    padding: 20px 0;
+  }
+
+  .options svg {
+    width: 20px;
+    height: 20px;
+  }
 }

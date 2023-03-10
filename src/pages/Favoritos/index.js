@@ -26,7 +26,7 @@ function Favorites(){
     <>
       <div className="my-movies">
         <h1 className="title">Meus filmes</h1>
-        {movies.length === 0 && <span className="message">Você não possui nenhum filme salvo :( </span>}
+        {movies.length === 0 && <div className="message">Você não possui nenhum filme salvo :( </div>}
         <ul>
           {movies.map((item) => {
             return(
@@ -34,7 +34,7 @@ function Favorites(){
                 <Link to={`/filme/${item.id}`}>
                   <div className="infos">
                     <img src={`https://image.tmdb.org/t/p/original/${item.backdrop_path}`} alt={item.title} />
-                    <span className="movie-title">{item.title}</span>
+                    <div className="movie-title">{item.title}</div>
                   </div>
                 </Link>
                 <div className="options">
