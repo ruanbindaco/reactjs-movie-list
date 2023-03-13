@@ -7,13 +7,12 @@ function Home(){
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-
   useEffect(()=>{
 
     async function loadMovies(){
       const response = await api.get("movie/now_playing", {
         params:{
-         api_key: "28fc232cc001c31e8a031f419d0a14ca",
+         api_key: process.env.REACT_APP_API_KEY,
          language: "pt-BR",
          page: 1,
         }
