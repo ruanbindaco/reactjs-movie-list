@@ -1,6 +1,7 @@
 {
   "name": "movie-app",
   "version": "0.1.0",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -16,10 +17,7 @@
     "timers": "^0.1.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://ruanbindaco.github.io/reactjs-movie-list",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

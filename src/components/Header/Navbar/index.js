@@ -5,10 +5,10 @@ function Navbar() {
     return(
         <div className="navbar">
             <header>
-            <Link to="/reactjs-movie-list">
+            <Link to="/">
                 <img src={require('../../../assets/logo.png')} alt="Logo" className="logo" />
             </Link>
-            <Link className="navbar-item" to="/reactjs-movie-list">Filmes</Link>
+            <Link className="navbar-item" to="/">Filmes</Link>
             <Link className="favorites" to="/favoritos">Minha Lista</Link>
             <div className="social">
                 <a href="https://www.linkedin.com/in/ruanbindaco" target={'_blank'}>
