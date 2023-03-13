@@ -4,7 +4,7 @@ import { useDelayUnmount } from '../../../hooks/useDelayUnmount';
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMenuMounted, setIsMenuMounted] = useState(true);
+  const [isMenuMounted, setIsMenuMounted] = useState(false);
   const shouldRenderMenu = useDelayUnmount(isMenuMounted, 500);
   const mountedStyle = 'fadeIn';
   const unmountedStyle = 'fadeOut';
