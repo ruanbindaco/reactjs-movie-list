@@ -42,7 +42,7 @@ function Sidebar() {
           </div>
           <div className="sidebar-items">
             <div onClick={() => toggleSidebar()}>
-              <Link to="/">
+              <Link to="/reactjs-movie-list">
                 Filmes
               </Link>
               </div>
