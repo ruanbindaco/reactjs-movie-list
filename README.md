@@ -1,5 +1,3 @@
-# Access the website 
-Click <a href="https://reactjs-movie-list.vercel.app/">HERE</a>
 
 # Getting Started with Create React App
 
