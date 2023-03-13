@@ -1,12 +1,19 @@
 import { useState } from 'react';
 import {Link} from 'react-router-dom';
+import { useDelayUnmount } from '../../../hooks/useDelayUnmount';
 
 function Sidebar() {
-
   const [isOpen, setIsOpen] = useState(false);
+  const [isMenuMounted, setIsMenuMounted] = useState(true);
+  const shouldRenderMenu = useDelayUnmount(isMenuMounted, 500);
+  const mountedStyle = 'fadeIn';
+  const unmountedStyle = 'fadeOut';
   
   const toggleSidebar = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(true);
+    if (setIsOpen) {
+      setIsMenuMounted(!isMenuMounted);
+    }
   };
 
   return(
@@ -17,14 +24,14 @@ function Sidebar() {
           <img src={require('../../../assets/menu.png')} alt="Menu" />
         </div>
       </div>
-      {isOpen && (
+      {shouldRenderMenu && isOpen && (
       <>
         <div
           onClick={() => toggleSidebar()}
-          className={`modal-bg ${isOpen ? 'open' : ''}`}
+          className={`modal-bg ${isMenuMounted ? mountedStyle : unmountedStyle}`}
           ></div>
 
-        <div className={`sidebar-content ${isOpen ? 'open' : ''}`}>
+        <div className={`sidebar-content ${isMenuMounted ? mountedStyle : unmountedStyle}`}>
           <div className="sidebar-header">
             <div>
               <img src={require('../../../assets/logo.png')} alt="Logo" className="logo" />

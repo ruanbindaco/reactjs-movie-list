@@ -109,4 +109,31 @@
     height: 25px;
   }
 
+  .fadeIn {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+
+  .fadeOut {
+    animation: fadeOut 0.4s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
 }
