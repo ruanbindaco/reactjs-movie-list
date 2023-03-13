@@ -5,11 +5,12 @@ import { toast } from 'react-toastify'
 
 function Favorites(){
   const [movies, setMovies] = useState([])
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(()=>{
     const myList = localStorage.getItem("@12movies");
     setMovies(JSON.parse(myList) || [])
-
+    setIsLoading(false);
   }, [])
 
   function deleteMovie(id){
@@ -24,6 +25,12 @@ function Favorites(){
 
   return(
     <>
+      { isLoading ? (
+          <div className="loading">
+            <h2>Carregando filmes...</h2>
+          </div>
+      ) :
+      (
       <div className="my-movies">
         <h1 className="title">Meus filmes</h1>
         {movies.length === 0 && <div className="message">Você não possui nenhum filme salvo :( </div>}
@@ -56,6 +63,7 @@ function Favorites(){
           })}
         </ul>
       </div>
+      )}
     </>
   )
 }

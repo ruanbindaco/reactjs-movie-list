@@ -18,7 +18,7 @@ function Home(){
          page: 1,
         }
       })
-      setMovies(response.data.results.slice(0, 12))
+      setMovies(response.data.results.slice(0, 20))
       setIsLoading(false);
     }
 
