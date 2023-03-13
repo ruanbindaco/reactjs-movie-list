@@ -50,7 +50,7 @@ function Filme(){
     <>
     { isLoading ? (
       <div className="loading">
-        <h1>Carregando detalhes...</h1>
+        <h2>Carregando detalhes...</h2>
       </div>
     )
     : (
@@ -60,7 +60,7 @@ function Filme(){
         <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} />
         <h3 className="sinopse">Sinopse</h3>
         <span className="overview">{movie.overview}</span>
-        <strong className="rating">Avalição: {movie.vote_average} / 10</strong>
+        <strong className="rating">Avalição: {(Math.round(movie.vote_average * 100) / 100).toFixed(1)} / 10</strong>
         <div className="area-buttons">
           <button onClick={saveMovie}>Salvar</button>
           <button>
